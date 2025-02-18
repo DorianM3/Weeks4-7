@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Rotater : MonoBehaviour
@@ -13,6 +14,8 @@ public class Rotater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
+        Vector2 direction = mousepos - (Vector2)transform.position;
+        transform.up = direction; 
     }
 }
