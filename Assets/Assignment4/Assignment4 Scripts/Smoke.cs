@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Smoke : MonoBehaviour
 {
-    public GameObject smokeup; 
+    public GameObject smokeup;
+    public Transform train; 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,8 @@ public class Smoke : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(smokeup); 
+            GameObject newsmoke = Instantiate(smokeup, train.position, train.rotation);
+            Destroy(newsmoke, 2); 
         }
     }
 }
