@@ -18,9 +18,9 @@ public class Seagulmove : MonoBehaviour
         seagulpos = transform.position;
         seagulpos.x += speed * Time.deltaTime; 
 
-        if(seagulpos.x > 15)
+        if(seagulpos.x > 20)
         {
-            seagulpos.x = -20; 
+            seagulpos.x = -25; 
         }
 
         transform.position = seagulpos;
