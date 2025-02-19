@@ -15,10 +15,14 @@ public class Smoke : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject newsmoke = Instantiate(smokeup, train.position, train.rotation);
-            Destroy(newsmoke, 2); 
-        }
+   
+    }
+
+    public void Go()
+    {
+        //Instantiates the smoke object as newsmoke so the original is not deleted 
+        GameObject newsmoke = Instantiate(smokeup, train.position, train.rotation);
+        //Destroys the new object after 2 seconds as the smoke is off screen by this time
+        Destroy(newsmoke, 2);
     }
 }
