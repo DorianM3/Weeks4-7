@@ -16,7 +16,9 @@ public class Timed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //makes the timer go up by Time.deltaTime
         maxmin += Time.deltaTime;
+        //Lets the timer loop around using the modules tool 
         slidertime.value = maxmin % slidertime.maxValue; 
     }
 }
